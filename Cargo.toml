@@ -2,6 +2,12 @@
 name = "ntprocesses"
 version = "0.1.0"
 edition = "2021"
+license = "MIT"
+keywords = ["windows", "reverse-engineering", "injection", "x64", "process"]
+description = "Rust library that makes it easy to manipulate Windows' processes."
+repository = "https://github.com/item-self/ntprocesses"
+homepage = "https://github.com/item-self/ntprocesses"
+readme = "README.md"
 
 [dependencies]
 log = "0.4.27"
