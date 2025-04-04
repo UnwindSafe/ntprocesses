@@ -7,11 +7,11 @@ The name comes from the ability to specifically target processes found with the 
 ## Usage
 ```toml
 [dependencies]
-ntprocesses = { git = "https://gitlab.com/ntprocesses/ntprocesses.git" }
+ntprocesses = { git = "https://github.com/item-self/ntprocesses.git" }
 ```
 \- or -
 ```bash
-$ git clone https://gitlab.com/ntprocesses/ntprocesses.git
+$ git clone https://github.com/item-self/ntprocesses.git
 $ cd ntprocesses
 $ cargo test
 ```
