@@ -4,7 +4,7 @@ use windows::Win32::Foundation::{GetHandleInformation, HANDLE};
 #[derive(Error, Debug)]
 pub enum HandleError {
     #[error("Handle ({0:X?}) has either become invalid or was always invalid. ")]
-    Invalid(HANDLE),
+    Invalid(u64),
 }
 
 pub struct SafeHandle {
@@ -40,7 +40,7 @@ impl SafeHandle {
     /// Anything that can touch the handle can be sure that it's valid.
     pub fn get(&self) -> Result<HANDLE, HandleError> {
         if !self.is_valid() {
-            return Err(HandleError::Invalid(self.raw_handle));
+            return Err(HandleError::Invalid(self.raw_handle.0 as _));
         }
 
         Ok(self.raw_handle)
