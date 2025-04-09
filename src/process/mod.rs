@@ -47,10 +47,13 @@ pub enum ProcessError {
 type Result<T> = std::result::Result<T, ProcessError>;
 
 /// Marker struct for process type.
+#[derive(Clone, Copy, Debug, PartialEq, Eq, PartialOrd, Ord)]
 pub struct Snapshot;
 /// Marker struct for process type.
+#[derive(Clone, Copy, Debug, PartialEq, Eq, PartialOrd, Ord)]
 pub struct NT;
 /// Marker struct for process type.
+#[derive(Clone, Copy, Debug, PartialEq, Eq, PartialOrd, Ord)]
 pub struct Created;
 
 pub struct Process<Method> {
