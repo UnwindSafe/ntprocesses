@@ -57,7 +57,7 @@ pub struct NT;
 pub struct Created;
 
 pub struct Process<Method> {
-    handle: SafeHandle,
+    pub handle: SafeHandle,
     pub name: String,
     pub process_id: u32,
     /// This holds extra process information, depending on source.
